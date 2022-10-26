@@ -8,7 +8,6 @@ import murach.business.User;
 import murach.data.UserIO;
 import murach.util.CookieUtil;
 
-@SuppressWarnings("serial")
 public class DownloadServlet extends HttpServlet {
 
     @Override
@@ -96,14 +95,13 @@ public class DownloadServlet extends HttpServlet {
 
     private String registerUser(HttpServletRequest request,
             HttpServletResponse response) {
-        
+
         // get the user data
         String email = request.getParameter("email");
         String firstName = request.getParameter("firstName");
         String lastName = request.getParameter("lastName");
 
         // store the data in a User object
-
         User user = new User();
         user.setEmail(email);
         user.setFirstName(firstName);
